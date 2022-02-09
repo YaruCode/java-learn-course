@@ -11,61 +11,35 @@ public class Main {
 
     public static void main(String[] args) {
 
+        int[] nums={1,4,7,10};
+       int index= BinarySearch(nums,10);
+        System.out.println(index);
+    }
 
-        String str1 = new String("hello");
-        String str2 = new String("hello");
+    public static int BinarySearch(int[] nums,int x)
+    {
+        int low=0;
+        int high=nums.length-1;
+        int mid;
+        while(low<high)
+        {
+            mid=(low+high);
+            if(nums[mid]==x)
+            {
+                return mid;
+            }
+            if(nums[mid]>x)
+            {
+                //中间的比想要查找的要大
+                low=mid+1;
+            }
+            if(nums[mid]<x)
+            {
+                high=mid-1;
+            }
+        }
 
-
-//        System.out.println(str1==str2);
-//        System.out.println(str1.equals(str1));
-
-
-//        System.out.println(16>>2);
-
-//        char[] data=new char[10];
-//
-//        List<Character> res  =new ArrayList<>();
-//
-//        res.add((char)2);
-//        res.add((char)1);
-//        res.add('c');
-//        System.out.println( res.toString());
-//
-//        isPowerOfFour(16);
-
-//
-//        int a=3;
-//        int b=6;
-//
-//        System.out.println("before");
-//        System.out.println(a);
-//        System.out.println(b);
-//
-//        System.out.println("after");
-//        a=a^b;
-//        b=b^a;
-//        a=a^b;
-//
-//
-//
-//
-//        System.out.println(a);
-//        System.out.println(b);
-
-//        int a=5;
-//        findComplement(a);
-
-        //System.out.println(3^3^2);
-
-        Arrays.asList list;
-        list = new Arrays.asList("sds", "Dsds");
-        Map<Integer,String> map=new HashMap<>();
-        Collection<String> values = map.values() ;
-        Map.Entry entry;
-        HashMap<String, String> stringStringHashMap = new HashMap<>();
-        Test();
-
-
+        return -1;
     }
 
     public static int NumberOfOne(int a) {
@@ -104,14 +78,12 @@ public class Main {
     }
 
     public static void Test() {
-    Map<Integer,Integer> map=new HashMap<>();
-    map.put(-1,2);
-    for(Map.Entry<Integer,Integer> entrry: map.entrySet())
-    {
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(-1, 2);
+        for (Map.Entry<Integer, Integer> entrry : map.entrySet()) {
 
 
-    }
-
+        }
 
 
     }
@@ -122,7 +94,7 @@ public class Main {
             res.add((char) (num % 2));
             num /= 2;
         }
-        
+
         return res;
     }
 
