@@ -11,9 +11,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] nums={1,4,7,10};
-       int index= BinarySearch(nums,10);
-        System.out.println(index);
+        List<String> list=new ArrayList<>();
+        Map<Integer,Integer> map;
+        map.entrySet().stream().sorted((p1,p2)->p1.getValue().compareTo(p2.getValue()))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     public static int BinarySearch(int[] nums,int x)
